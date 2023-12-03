@@ -19,7 +19,7 @@ function Videoplayer({ slideIn, handleSlideIn }) {
         const plyr = new Plyr(player.current,{fullscreen:{ enabled: false, fallback: false, },clickToPlay:false});
 
         plyr.on('dblclick',(e)=>{
-          if(e.clientX < 500) {plyr.rewind(5)}
+          if(e.clientX < 500) {plyr.rewind(10)}
           else if(e.clientX < 650 && e.clientX > 500 ) {plyr.togglePlay()}
           else if(e.clientX > 650) {plyr.forward(10)} 
         })
